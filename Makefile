@@ -29,7 +29,7 @@ CUSTOMPREFIX = $(PWD)
 BIB = $(PWD)/research.bib
 
 ## CSL stylesheet (located in the csl folder of the PREFIX directory).
-CSL = $(PWD)/ieee.csl
+CSL = $(PWD)/styles/ieee.csl
 
 
 PDFS=$(SRC:.md=.pdf)
