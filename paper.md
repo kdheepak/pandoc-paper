@@ -8,6 +8,7 @@ date: Jan 2016
 thanks: Aliquam erat volutpat. Morbi ultrices bibendum varius. Nulla malesuada, ante nec sollicitudin placerat, metus quam efficitur diam, vel egestas neque ante id lorem. Maecenas gravida pellentesque lacus sed vehicula. Fusce sodales vehicula congue. Donec sagittis pharetra ipsum quis pharetra. Nulla ante lacus, vehicula vel blandit efficitur, tristique at libero. Cras scelerisque, leo ut vulputate ultricies, ante turpis ullamcorper justo, ac gravida ligula sapien non lorem. Donec venenatis facilisis orci. Mauris sollicitudin gravida nisl sollicitudin tincidunt. Praesent eu tristique lacus, iaculis consequat nisl. Sed accumsan ut erat eu gravida. Nunc condimentum varius vulputate. Sed in metus varius, ultrices ex non, sollicitudin velit.
 abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus vulputate orci, eget lobortis urna cursus vel. Donec tristique nec magna sed lacinia. Aenean imperdiet ultrices turpis nec lacinia. Duis a quam ornare, auctor lacus eu, blandit ligula. Integer ac velit maximus, congue sem at, fringilla odio. Quisque tincidunt bibendum odio, non condimentum tellus auctor in. Sed mattis ultrices enim in laoreet. Suspendisse eget arcu eros. Mauris vel ante non quam dapibus blandit. Sed consequat blandit odio, et pretium massa ultricies eget. Praesent congue purus est, quis tristique ante euismod sit amet.
 bibliography: <!-- \bibliography{research.bib} -->
+link-citations: true
 ...
 
 \begin{IEEEkeywords}
