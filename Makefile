@@ -50,6 +50,15 @@ diff:
 
 %.html:	%.md
 	pandoc --mathjax -r markdown+simple_tables+table_captions+yaml_metadata_block -w html -S --template=$(CUSTOMPREFIX)/templates/html.template --css=$(CUSTOMPREFIX)/templates/kultiad-serif.css --filter pandoc-citeproc --filter ./scripts/remove_ieeekeywords.py --csl=$(CSL) --bibliography=$(BIB) -o $@ $<
+	pandoc -t html5 --template=default.revealjs \
+	--mathjax -r markdown+simple_tables+table_captions+yaml_metadata_block -S \
+	--filter pandoc-citeproc --filter ./scripts/remove_ieeekeywords.py \
+	--csl=$(CSL) \
+	--bibliography=$(BIB) \
+	--standalone --section-divs \
+	--variable reveal-url=../reveal.js \
+	--variable theme="white" \
+	--variable transition="linear" $< -o slide-$@
 
 %.tex:	%.md
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w latex -s -S --latex-engine=pdflatex --template=$(CUSTOMPREFIX)/templates/latex.template --filter pandoc-fignos --filter pandoc-eqnos --filter pandoc-tablenos --filter pandoc-citeproc --csl=$(CSL) --bibliography=$(BIB) -o $@ $<
@@ -60,7 +69,7 @@ diff:
 %.pdf:	%.md
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -s -S --latex-engine=pdflatex --template=$(CUSTOMPREFIX)/templates/latex.template --filter pandoc-fignos --filter pandoc-eqnos --filter pandoc-tablenos --filter pandoc-citeproc --csl=$(CSL) --bibliography=$(BIB) -o ieee-$@ $<
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -s -S --latex-engine=pdflatex --filter ./scripts/remove_ieeekeywords.py --filter pandoc-fignos --filter pandoc-eqnos --filter pandoc-tablenos --filter pandoc-citeproc --csl=$(CSL) --bibliography=$(BIB) -o $@ $<
-
+	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -s -S --latex-engine=pdflatex --filter ./scripts/remove_ieeekeywords.py --filter pandoc-fignos --filter pandoc-eqnos --filter pandoc-tablenos --filter pandoc-citeproc --csl=$(CSL) --bibliography=$(BIB) $< -t beamer --slide-level=2 -o slide-$@
 
 clean:
 	rm -f *.html *.pdf *.tex *.aux *.log *.dvi *.docx
