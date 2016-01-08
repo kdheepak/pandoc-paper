@@ -23,13 +23,13 @@ SRC = $(wildcard *.$(MEXT))
 PREFIX = /Users/$(USER)/.pandoc
 
 ## Location of Pandoc support files.
-CUSTOMPREFIX = $(PWD)
+CUSTOMPREFIX = .
 
 ## Location of your working bibliography file
-BIB = $(PWD)/research.bib
+BIB = ./research.bib
 
 ## CSL stylesheet (located in the csl folder of the PREFIX directory).
-CSL = $(PWD)/styles/ieee.csl
+CSL = ./styles/ieee.csl
 
 
 PDFS=$(SRC:.md=.pdf)
