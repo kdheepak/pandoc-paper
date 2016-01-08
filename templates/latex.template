@@ -27,8 +27,10 @@ $endif$
 \usepackage{tikz}
 \usepackage{smartdiagram}
 \usepackage{hyperref}
-
+\usepackage{svg}
+\usepackage{amsmath}
 \usetikzlibrary{calc, shapes, backgrounds}
+\usepackage[normalem]{ulem}
 
 % pandoc latex.writer redefines tightlist as shown below
 \providecommand{\tightlist}{%
