@@ -18,6 +18,7 @@ $if(tables)$
 \usepackage{longtable}
 $endif$
 
+\usepackage[normalem]{ulem}
 \usepackage{rotating}
 \usepackage{multirow}
 \usepackage[margin=0.5in]{geometry}
