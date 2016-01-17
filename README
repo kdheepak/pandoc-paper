@@ -1,1 +1,4 @@
 # pandoc-paper
+
+  conda create env
+  source activate paper-env
